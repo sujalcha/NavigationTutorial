@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/destinationMain">
+
+    <fragment
+        android:id="@+id/destinationMain"
+        android:name="com.xtha.zujal.navigationtutorial.DestinationMain"
+        android:label="fragment_destination_main"
+        tools:layout="@layout/fragment_destination_main" >
+        <action
+            android:id="@+id/action_destinationMain_to_destinationOne"
+            app:destination="@id/destinationOne" />
+        <action
+            android:id="@+id/action_destinationMain_to_destinationTwo"
+            app:destination="@id/destinationTwo" />
+        <action
+            android:id="@+id/action_destinationMain_to_destinationThree"
+            app:destination="@id/destinationThree" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/destinationOne"
+        android:name="com.xtha.zujal.navigationtutorial.DestinationOne"
+        android:label="fragment_destination_one"
+        tools:layout="@layout/fragment_destination_one" />
+    <fragment
+        android:id="@+id/destinationTwo"
+        android:name="com.xtha.zujal.navigationtutorial.DestinationTwo"
+        android:label="fragment_destination_two"
+        tools:layout="@layout/fragment_destination_two" >
+        <action
+            android:id="@+id/action_destinationTwo_to_destinationTwoOne"
+            app:destination="@id/destinationTwoOne" />
+        <action
+            android:id="@+id/action_destinationTwo_to_destinationTwoTwo"
+            app:destination="@id/destinationTwoTwo" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/destinationThree"
+        android:name="com.xtha.zujal.navigationtutorial.DestinationThree"
+        android:label="fragment_destination_three"
+        tools:layout="@layout/fragment_destination_three" />
+    <fragment
+        android:id="@+id/destinationTwoOne"
+        android:name="com.xtha.zujal.navigationtutorial.DestinationTwoOne"
+        android:label="fragment_destination_two_one"
+        tools:layout="@layout/fragment_destination_two_one" >
+        <action
+            android:id="@+id/action_destinationTwoOne_to_destinationTwoOneOne"
+            app:destination="@id/destinationTwoOneOne" />
+    </fragment>
+    <fragment
+        android:id="@+id/destinationTwoOneOne"
+        android:name="com.xtha.zujal.navigationtutorial.DestinationTwoOneOne"
+        android:label="fragment_destination_two_one_one"
+        tools:layout="@layout/fragment_destination_two_one_one" >
+        <action
+            android:id="@+id/action_destinationTwoOneOne_to_destinationTwoOneOneOne"
+            app:destination="@id/destinationTwoOneOneOne" />
+        <argument
+            android:name="CustomerName"
+            app:argType="string"
+            android:defaultValue="Sujal" />
+    </fragment>
+    <fragment
+        android:id="@+id/destinationTwoOneOneOne"
+        android:name="com.xtha.zujal.navigationtutorial.DestinationTwoOneOneOne"
+        android:label="fragment_destination_two_one_one_one"
+        tools:layout="@layout/fragment_destination_two_one_one_one" />
+    <fragment
+        android:id="@+id/destinationTwoTwo"
+        android:name="com.xtha.zujal.navigationtutorial.DestinationTwoTwo"
+        android:label="fragment_destination_two_two"
+        tools:layout="@layout/fragment_destination_two_two" />
+</navigation>
